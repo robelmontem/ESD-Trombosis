@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="https://biolink.github.io/biolink-model/">
+
+  <owl:Ontology rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl">
+    <rdfs:label>Thrombosis Knowledge Graph</rdfs:label>
+  </owl:Ontology>
+
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007596">
+    <rdf:type rdf:resource="https://biolink.github.io/biolink-model/BiologicalProcess"/>
+    <rdfs:label>blood coagulation</rdfs:label>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P00734"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P01008"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P03951"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P04070"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P07225"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P12259"/>
+  </rdf:Description>
+
+  <ns0:BiologicalProcess rdf:about="http://purl.obolibrary.org/obo/GO_0007599">
+    <rdfs:label>hemostasis</rdfs:label>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P01008"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P03951"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P04070"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P07225"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P12259"/>
+  </ns0:BiologicalProcess>
+
+  <ns0:BiologicalProcess rdf:about="http://purl.obolibrary.org/obo/GO_0072376">
+    <rdfs:label>protein activation cascade</rdfs:label>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P00734"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P03951"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P12259"/>
+  </ns0:BiologicalProcess>
+
+  <ns0:BiologicalProcess rdf:about="http://purl.obolibrary.org/obo/GO_0007597">
+    <rdfs:label>blood coagulation, intrinsic pathway</rdfs:label>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P03951"/>
+  </ns0:BiologicalProcess>
+
+  <ns0:BiologicalProcess rdf:about="http://purl.obolibrary.org/obo/GO_0007598">
+    <rdfs:label>blood coagulation, fibrin clot formation</rdfs:label>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P00734"/>
+    <ns0:has_participant rdf:resource="http://purl.uniprot.org/uniprot/P12259"/>
+  </ns0:BiologicalProcess>
+
+  <ns0:Protein rdf:about="http://purl.uniprot.org/uniprot/P00734">
+    <rdfs:label>prothrombin</rdfs:label>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007596"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007598"/>
+  </ns0:Protein>
+
+  <ns0:Protein rdf:about="http://purl.uniprot.org/uniprot/P01008">
+    <rdfs:label>antithrombin</rdfs:label>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007596"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007599"/>
+  </ns0:Protein>
+
+  <ns0:Protein rdf:about="http://purl.uniprot.org/uniprot/P03951">
+    <rdfs:label>coagulation factor XI</rdfs:label>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007596"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007597"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007599"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0072376"/>
+  </ns0:Protein>
+
+  <ns0:Protein rdf:about="http://purl.uniprot.org/uniprot/P04070">
+    <rdfs:label>vitamin K-dependent protein C</rdfs:label>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007596"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007599"/>
+  </ns0:Protein>
+
+  <ns0:Protein rdf:about="http://purl.uniprot.org/uniprot/P07225">
+    <rdfs:label>vitamin K-dependent protein S</rdfs:label>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007596"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007599"/>
+  </ns0:Protein>
+
+  <ns0:Protein rdf:about="http://purl.uniprot.org/uniprot/P12259">
+    <rdfs:label>coagulation factor V</rdfs:label>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007596"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007598"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0007599"/>
+    <ns0:participates_in rdf:resource="http://purl.obolibrary.org/obo/GO_0072376"/>
+  </ns0:Protein>
+
+  <ns0:Gene rdf:about="https://identifiers.org/hgnc:3535">
+    <rdfs:label>F2</rdfs:label>
+    <ns0:has_gene_product rdf:resource="http://purl.uniprot.org/uniprot/P00734"/>
+    <ns0:gene_associated_with_condition rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008559"/>
+  </ns0:Gene>
+
+  <ns0:Gene rdf:about="https://identifiers.org/hgnc:3542">
+    <rdfs:label>F5</rdfs:label>
+    <ns0:has_gene_product rdf:resource="http://purl.uniprot.org/uniprot/P12259"/>
+    <ns0:gene_associated_with_condition rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008560"/>
+  </ns0:Gene>
+
+  <ns0:Gene rdf:about="https://identifiers.org/hgnc:775">
+    <rdfs:label>SERPINC1</rdfs:label>
+    <ns0:has_gene_product rdf:resource="http://purl.uniprot.org/uniprot/P01008"/>
+    <ns0:gene_associated_with_condition>
+      <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0013144">
+        <rdfs:label>hereditary antithrombin deficiency</rdfs:label>
+        <ns0:subclass_of rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002305"/>
+      </ns0:Disease>
+    </ns0:gene_associated_with_condition>
+
+  </ns0:Gene>
+
+  <ns0:Gene rdf:about="https://identifiers.org/hgnc:9451">
+    <rdfs:label>PROC</rdfs:label>
+    <ns0:has_gene_product rdf:resource="http://purl.uniprot.org/uniprot/P04070"/>
+    <ns0:gene_associated_with_condition>
+      <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0008316">
+        <rdfs:label>protein C deficiency thrombophilia</rdfs:label>
+        <ns0:subclass_of rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002305"/>
+      </ns0:Disease>
+    </ns0:gene_associated_with_condition>
+
+  </ns0:Gene>
+
+  <ns0:Gene rdf:about="https://identifiers.org/hgnc:9456">
+    <rdfs:label>PROS1</rdfs:label>
+    <ns0:has_gene_product rdf:resource="http://purl.uniprot.org/uniprot/P07225"/>
+    <ns0:gene_associated_with_condition>
+      <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0002304">
+        <rdfs:label>protein S deficiency thrombophilia</rdfs:label>
+        <ns0:subclass_of rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002305"/>
+      </ns0:Disease>
+    </ns0:gene_associated_with_condition>
+
+  </ns0:Gene>
+
+  <ns0:Gene rdf:about="https://identifiers.org/hgnc:3529">
+    <rdfs:label>F11</rdfs:label>
+    <ns0:has_gene_product rdf:resource="http://purl.uniprot.org/uniprot/P03951"/>
+  </ns0:Gene>
+
+  <ns0:Gene rdf:about="https://identifiers.org/hgnc:9458">
+    <rdfs:label>PROS2P</rdfs:label>
+    <ns0:category>pseudogene</ns0:category>
+  </ns0:Gene>
+
+  <ns0:Disease rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#Thrombosis">
+    <rdfs:label>thrombosis</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/DOID_0060903"/>
+  </ns0:Disease>
+
+  <ns0:Disease rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#VenousThrombosis">
+    <rdfs:label>venous thrombosis</rdfs:label>
+    <ns0:subclass_of rdf:resource="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#Thrombosis"/>
+  </ns0:Disease>
+
+  <ns0:Disease rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#ArterialThrombosis">
+    <rdfs:label>arterial thrombosis</rdfs:label>
+    <ns0:subclass_of rdf:resource="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#Thrombosis"/>
+  </ns0:Disease>
+
+  <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0005399">
+    <rdfs:label>venous thromboembolism</rdfs:label>
+    <ns0:subclass_of rdf:resource="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#VenousThrombosis"/>
+  </ns0:Disease>
+
+  <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0005279">
+    <rdfs:label>pulmonary embolism</rdfs:label>
+    <ns0:subclass_of rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005399"/>
+  </ns0:Disease>
+
+  <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0002305">
+    <rdfs:label>thrombophilia</rdfs:label>
+    <ns0:subclass_of rdf:resource="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#Thrombosis"/>
+  </ns0:Disease>
+
+  <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0008560">
+    <rdfs:label>thrombophilia due to activated protein C resistance</rdfs:label>
+    <ns0:subclass_of rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002305"/>
+  </ns0:Disease>
+
+  <ns0:Disease rdf:about="http://purl.obolibrary.org/obo/MONDO_0008559">
+    <rdfs:label>thrombophilia due to thrombin defect</rdfs:label>
+    <ns0:subclass_of rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002305"/>
+  </ns0:Disease>
+
+  <ns0:SequenceVariant rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#FactorV_Leiden_rs6025">
+    <rdfs:label>Factor V Leiden</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://identifiers.org/dbsnp/rs6025"/>
+    <ns0:variant_of rdf:resource="https://identifiers.org/hgnc:3542"/>
+    <ns0:related_to rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008560"/>
+  </ns0:SequenceVariant>
+
+  <ns0:SequenceVariant rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#Prothrombin_G20210A_rs1799963">
+    <rdfs:label>Prothrombin G20210A</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://identifiers.org/dbsnp/rs1799963"/>
+    <ns0:variant_of rdf:resource="https://identifiers.org/hgnc:3535"/>
+    <ns0:related_to rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008559"/>
+  </ns0:SequenceVariant>
+
+  <ns0:PhenotypicFeature rdf:about="http://purl.obolibrary.org/obo/HP_0001892">
+    <rdfs:label>abnormal bleeding</rdfs:label>
+  </ns0:PhenotypicFeature>
+
+  <ns0:PhenotypicFeature rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#BleedingRisk">
+    <rdfs:label>bleeding risk</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0001892"/>
+  </ns0:PhenotypicFeature>
+
+  <ns0:Drug rdf:about="https://go.drugbank.com/drugs/DB00682">
+    <rdfs:label>warfarin</rdfs:label>
+    <ns0:treats rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005399"/>
+    <ns0:associated_with rdf:resource="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#BleedingRisk"/>
+  </ns0:Drug>
+
+  <ns0:Drug rdf:about="https://go.drugbank.com/drugs/DB01109">
+    <rdfs:label>heparin</rdfs:label>
+    <ns0:treats rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005399"/>
+    <ns0:associated_with rdf:resource="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#BleedingRisk"/>
+  </ns0:Drug>
+
+  <ns0:Treatment rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#VitaminKAntagonistTherapy">
+    <rdfs:label>vitamin K antagonist therapy</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://go.drugbank.com/categories/DBCAT002267"/>
+    <ns0:has_drug rdf:resource="https://go.drugbank.com/drugs/DB00682"/>
+  </ns0:Treatment>
+
+  <ns0:Treatment rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#HeparinTherapy">
+    <rdfs:label>heparin therapy</rdfs:label>
+    <ns0:has_drug rdf:resource="https://go.drugbank.com/drugs/DB01109"/>
+  </ns0:Treatment>
+
+  <ns0:Treatment rdf:about="https://dayhoff.inf.um.es/ontologies/thrombosis.owl#FXIInhibitorTherapy">
+    <rdfs:label>Factor XI inhibitor therapy</rdfs:label>
+    <ns0:targets rdf:resource="http://purl.uniprot.org/uniprot/P03951"/>
+  </ns0:Treatment>
+
+</rdf:RDF>
