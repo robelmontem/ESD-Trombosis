@@ -1,0 +1,218 @@
+@prefix rbm: <https://dayhoff.inf.um.es/ontologies/thrombosis.owl#> .
+
+@prefix biolink: <https://biolink.github.io/biolink-model/> .
+@prefix GO: <http://purl.obolibrary.org/obo/GO_> .
+@prefix HP: <http://purl.obolibrary.org/obo/HP_> .
+@prefix MONDO: <http://purl.obolibrary.org/obo/MONDO_> .
+@prefix DOID: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix HGNC: <https://identifiers.org/hgnc:> .
+@prefix dbSNP: <https://identifiers.org/dbsnp/> .
+@prefix drugbank: <https://go.drugbank.com/drugs/> .
+@prefix drugbankCat: <https://go.drugbank.com/categories/> .
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://dayhoff.inf.um.es/ontologies/thrombosis.owl> a owl:Ontology ;
+  rdfs:label "Thrombosis Knowledge Graph" .
+
+#################################################################
+# GO biological processes
+#################################################################
+
+GO:0007596 a biolink:BiologicalProcess ;
+  rdfs:label "blood coagulation" ;
+  biolink:has_participant uniprot:P00734, uniprot:P01008, uniprot:P03951, uniprot:P04070, uniprot:P07225, uniprot:P12259 .
+
+GO:0007599 a biolink:BiologicalProcess ;
+  rdfs:label "hemostasis" ;
+  biolink:has_participant uniprot:P01008, uniprot:P03951, uniprot:P04070, uniprot:P07225, uniprot:P12259 .
+
+GO:0072376 a biolink:BiologicalProcess ;
+  rdfs:label "protein activation cascade" ;
+  biolink:has_participant uniprot:P00734, uniprot:P03951, uniprot:P12259 .
+
+GO:0007597 a biolink:BiologicalProcess ;
+  rdfs:label "blood coagulation, intrinsic pathway" ;
+  biolink:has_participant uniprot:P03951 .
+
+GO:0007598 a biolink:BiologicalProcess ;
+  rdfs:label "blood coagulation, fibrin clot formation" ;
+  biolink:has_participant uniprot:P00734, uniprot:P12259 .
+
+#################################################################
+# Proteins (UniProt)
+#################################################################
+
+uniprot:P00734 a biolink:Protein ;
+  rdfs:label "prothrombin" ;
+  biolink:participates_in GO:0007596, GO:0007598 .
+
+uniprot:P01008 a biolink:Protein ;
+  rdfs:label "antithrombin" ;
+  biolink:participates_in GO:0007596, GO:0007599 .
+
+uniprot:P03951 a biolink:Protein ;
+  rdfs:label "coagulation factor XI" ;
+  biolink:participates_in GO:0007596, GO:0007597, GO:0007599, GO:0072376 .
+
+uniprot:P04070 a biolink:Protein ;
+  rdfs:label "vitamin K-dependent protein C" ;
+  biolink:participates_in GO:0007596, GO:0007599 .
+
+uniprot:P07225 a biolink:Protein ;
+  rdfs:label "vitamin K-dependent protein S" ;
+  biolink:participates_in GO:0007596, GO:0007599 .
+
+uniprot:P12259 a biolink:Protein ;
+  rdfs:label "coagulation factor V" ;
+  biolink:participates_in GO:0007596, GO:0007598, GO:0007599, GO:0072376 .
+
+#################################################################
+# Genes (HGNC)
+#################################################################
+
+HGNC:3535 a biolink:Gene ;
+  rdfs:label "F2" ;
+  biolink:has_gene_product uniprot:P00734 .
+
+HGNC:3542 a biolink:Gene ;
+  rdfs:label "F5" ;
+  biolink:has_gene_product uniprot:P12259 .
+
+HGNC:775 a biolink:Gene ;
+  rdfs:label "SERPINC1" ;
+  biolink:has_gene_product uniprot:P01008 .
+
+HGNC:9451 a biolink:Gene ;
+  rdfs:label "PROC" ;
+  biolink:has_gene_product uniprot:P04070 .
+
+HGNC:9456 a biolink:Gene ;
+  rdfs:label "PROS1" ;
+  biolink:has_gene_product uniprot:P07225 .
+
+HGNC:3529 a biolink:Gene ;
+  rdfs:label "F11" ;
+  biolink:has_gene_product uniprot:P03951 .
+
+HGNC:9458 a biolink:Gene ;
+  rdfs:label "PROS2P" ;
+  biolink:category "pseudogene" .
+
+#################################################################
+# Diseases (DOID, MONDO & local)
+#################################################################
+
+rbm:Thrombosis a biolink:Disease ;
+  rdfs:label "thrombosis" ;
+  rdfs:seeAlso DOID:0060903 .
+
+rbm:VenousThrombosis a biolink:Disease ;
+  rdfs:label "venous thrombosis" ;
+  biolink:subclass_of rbm:Thrombosis .
+
+rbm:ArterialThrombosis a biolink:Disease ;
+  rdfs:label "arterial thrombosis" ;
+  biolink:subclass_of rbm:Thrombosis .
+
+MONDO:0005399 a biolink:Disease ;
+  rdfs:label "venous thromboembolism" ;
+  biolink:subclass_of rbm:VenousThrombosis .
+
+MONDO:0005279 a biolink:Disease ;
+  rdfs:label "pulmonary embolism" ;
+  biolink:subclass_of MONDO:0005399 .
+
+MONDO:0002305 a biolink:Disease ;
+  rdfs:label "thrombophilia" ;
+  biolink:subclass_of rbm:Thrombosis .
+
+MONDO:0008316 a biolink:Disease ;
+  rdfs:label "protein C deficiency thrombophilia" ;
+  biolink:subclass_of MONDO:0002305 .
+
+MONDO:0002304 a biolink:Disease ;
+  rdfs:label "protein S deficiency thrombophilia" ;
+  biolink:subclass_of MONDO:0002305 .
+
+MONDO:0013144 a biolink:Disease ;
+  rdfs:label "hereditary antithrombin deficiency" ;
+  biolink:subclass_of MONDO:0002305 .
+
+# Trombofilias clásicas por variantes frecuentes
+MONDO:0008560 a biolink:Disease ;
+  rdfs:label "thrombophilia due to activated protein C resistance" ;
+  biolink:subclass_of MONDO:0002305 .
+
+MONDO:0008559 a biolink:Disease ;
+  rdfs:label "thrombophilia due to thrombin defect" ;
+  biolink:subclass_of MONDO:0002305 .
+
+#################################################################
+# Variants (SequenceVariant) linked to genes
+#################################################################
+
+# Factor V Leiden (rs6025)
+rbm:FactorV_Leiden_rs6025 a biolink:SequenceVariant ;
+  rdfs:label "Factor V Leiden" ;
+  rdfs:seeAlso dbSNP:rs6025 ;
+  biolink:variant_of HGNC:3542 ;
+  biolink:related_to MONDO:0008560 .
+
+# Prothrombin G20210A (rs1799963)
+rbm:Prothrombin_G20210A_rs1799963 a biolink:SequenceVariant ;
+  rdfs:label "Prothrombin G20210A" ;
+  rdfs:seeAlso dbSNP:rs1799963 ;
+  biolink:variant_of HGNC:3535 ;
+  biolink:related_to MONDO:0008559 .
+
+#################################################################
+# Phenotypes (HPO) & local
+#################################################################
+
+HP:0001892 a biolink:PhenotypicFeature ;
+  rdfs:label "abnormal bleeding" .
+
+rbm:BleedingRisk a biolink:PhenotypicFeature ;
+  rdfs:label "bleeding risk" ;
+  rdfs:seeAlso HP:0001892 .
+
+#################################################################
+# Drugs (DrugBank) and treatments
+#################################################################
+
+drugbank:DB00682 a biolink:Drug ;
+  rdfs:label "warfarin" ;
+  biolink:treats MONDO:0005399 ;
+  biolink:associated_with rbm:BleedingRisk .
+
+drugbank:DB01109 a biolink:Drug ;
+  rdfs:label "heparin" ;
+  biolink:treats MONDO:0005399 ;
+  biolink:associated_with rbm:BleedingRisk .
+
+rbm:VitaminKAntagonistTherapy a biolink:Treatment ;
+  rdfs:label "vitamin K antagonist therapy" ;
+  rdfs:seeAlso drugbankCat:DBCAT002267 ;
+  biolink:has_drug drugbank:DB00682 .
+
+rbm:HeparinTherapy a biolink:Treatment ;
+  rdfs:label "heparin therapy" ;
+  biolink:has_drug drugbank:DB01109 .
+
+rbm:FXIInhibitorTherapy a biolink:Treatment ;
+  rdfs:label "Factor XI inhibitor therapy" ;
+  biolink:targets uniprot:P03951 .
+
+#################################################################
+# Gene & disease associations (for SPARQL)
+#################################################################
+
+HGNC:775  biolink:gene_associated_with_condition MONDO:0013144 .
+HGNC:9451 biolink:gene_associated_with_condition MONDO:0008316 .
+HGNC:9456 biolink:gene_associated_with_condition MONDO:0002304 .
+HGNC:3542 biolink:gene_associated_with_condition MONDO:0008560 .
+HGNC:3535 biolink:gene_associated_with_condition MONDO:0008559 .
